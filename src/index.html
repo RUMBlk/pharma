@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharma</title>
+  </head>
+
+  <body>
+    <header>
+      <button id="mainpage">Перегляд товару</button>
+      <div id="search">
+        <input type="text" id="inp-search">
+        <button id="btn-search">Пошук</button>
+      </div>
+      <div class="not-auth" id="not-auth">
+        <button id="show-login">Увійти</button>
+      </div>
+    </header>
+    <main>
+      <section id="shop">
+        <div id="filter" class="filter">
+          <h3>Діапазон цін(включно)</h3>
+          <div class="form-full">
+            <div class="form-fields">
+              <span>Мінімум<input type="text" id="inp_price_min"></span>
+              <span>Максимум<input type="text" id="inp_price_max"></span>
+            </div>
+          </div>
+          <h3>Категорії</h3>
+          <div id="categories" class="form-full filter-form"></div>
+          <h3 id="shop-locations-title">Локації</h3>
+          <div id="shop-locations" class="form-full filter-form"></div>
+        </div>
+        <article class="products-controls">
+          <div class="products-container">
+            <div class="products" id="products">
+              <div>
+                <h1>Name</h1>
+                <div class="prod-category">Category</div>
+                <span>Description</span>
+                <button>Додати в кошик</button>
+              </div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+              <div class="one">One</div>
+            </div>
+          </div>
+          <div id="products-controls"></div>
+        </article>
+        <div class="cashreg-container" id="cashreg">
+
+          <div class="products-container">
+            <div class="minified-products" id="cashreg-products"></div>
+          </div>
+          <div class="product-controls">
+            <div class="sumline">
+              <span class="sum-label">Сума: </span>
+              <span id="cashreg-sum" class="sum">0 грн.</span>
+            </div>
+            <div class="controls-inline">
+              <button id="btn-sell" class="controls-inline-grow" style="display: none;">Оформити заказ</button>
+              <button id="btn-cart-clear" class="controls-inline-grow">Очистити</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="menu-positions">
+        <div id="pos-filter" class="filter">
+          <h3>Діапазон зарплати(включно)</h3>
+          <div class="form-full">
+            <div class="form-fields">
+              <span>Мінімум<input type="text" id="pos_salary_min"></span>
+              <span>Максимум<input type="text" id="pos_salary_max"></span>
+            </div>
+          </div>
+          <h3>Локації</h3>
+          <div id="posedit-locations" class="form-full"></div>
+        </div>
+        <article class="products-controls">
+          <div class="products-container">
+            <div class="products" id="posedit-table"></div>
+          </div>
+          <div>
+            <button id="btn-posedit-new" class="full-width-button">Створити нову посаду</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="menu-empl">
+        <article class="products-controls">
+          <div class="products-container">
+            <div class="products" id="empledit-table"></div>
+          </div>
+          <div class="form-full">
+            <button id="btn-empledit-new" class="full-width-button">Найняти працівника</button>
+            <button id="btn-empledit-pos" class="full-width-button">Повернутися назад</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="wdv-login" class="wdv-form">
+        <div class="form">
+          <h1>Авторизація</h1>
+          <span class="desc">Заповніть дану форму для авторизації.</span>
+          <div class="form-fields">
+            <span>Логін<input type="text" id="inp_loglogin"></span>
+            <span>Пароль<input type="password" id="inp_logpass"></span>
+          </div>
+          <button id="btn-login">Увійти</button>
+        </div>
+      </section>
+
+      <section id="wdv-register" class="wdv-form">
+        <div class="form">
+          <h1>Реєстрація</h1>
+          <span class="desc">Заповніть дану форму для реєстрації.</span>
+          <div class="form-fields">
+            <span>Логін<input type="text" id="inp_reglogin"></span>
+            <span>Пароль<input type="password" id="inp_regpass"></span>
+          </div>
+          <button id="btn-register">Зареєструвати</button>
+        </div>
+      </section>
+
+      <section id="menu" class="wdv-form">
+        <div class="form">
+          <h1>Меню</h1>
+          <button id="btn-menu-locations" style="display: none;">Локації</button>
+          <button id="btn-menu-positions" style="display: none;">Посади</button>
+          <button id="btn-menu-categories" style="display: none;">Редактор категорій</button>
+          <button id="btn-menu-products" style="display: none;">Редактор товарів</button>
+          <button id="btn-menu-exit">Вийти з акаунту</button>
+        </div>
+      </section>
+
+      <section id="menu-locations" class="editor">
+        <article class="products-container">
+          <div class="categories" id="locations-table">
+            <div>
+              <span>Name</span>
+              <button>Редагувати</button>
+              <button>Видалити</button>
+            </div>
+          </div>
+        </article>
+        <button id="btn-locedit-add">Створити нову локацію</button>
+      </section>
+
+      <section id="wdv-location-form" class="wdv-form">
+        <div class="form">
+          <h1 id="locedit-title">Редактор локації</h1>
+          <div class="form-fields">
+            <span>Назва<input type="text" id="inp-locedit-name"></span>
+            <span>Адреса<input type="text" id="inp-locedit-addr"></span>
+          </div>
+          <button id="btn-locedit-save">Зберегти</button>
+          <button id="btn-locedit-back">Повернутися назад</button>
+        </div>
+      </section>
+
+      <section id="menu-categories" class="editor">
+        <article class="products-container">
+          <div class="categories" id="categories-table">
+            <div>
+              <span>Name</span>
+              <button>Редагувати</button>
+              <button>Видалити</button>
+            </div>
+          </div>
+        </article>
+        <button id="btn-catedit-add">Створити нову категорію</button>
+      </section>
+
+      <section id="wdv-position-form" class="wdv-form">
+        <div class="form">
+          <h1 id="posedit-title">Редактор посади</h1>
+          <div class="form-fields">
+            <span>Назва<input type="text" id="inp-posedit-name"></span>
+            <span>Зарплата<input type="number" id="inp-posedit-salary" min="0" max="99999"></span>
+            <div class="form-full filter-form">
+              <div>
+                <input type="checkbox" id="posedit-cme" name="posedit-perm">
+                <label for="posedit-cme" class="larger-text">Ред. працівників</label>
+              </div>
+              <div>
+                <input type="checkbox" id="posedit-cmp" name="posedit-perm">
+                <label for="posedit-cmp" class="larger-text">Ред. посад</label>
+              </div>
+              <div>
+                <input type="checkbox" id="posedit-cmc" name="posedit-perm">
+                <label for="posedit-cmc" class="larger-text">Ред. категорій</label>
+              </div>
+              <div>
+                <input type="checkbox" id="posedit-csp" name="posedit-perm">
+                <label for="posedit-csp" class="larger-text">Продаж продуктів</label>
+              </div>
+              <div>
+                <input type="checkbox" id="posedit-cml" name="posedit-perm">
+                <label for="posedit-cml" class="larger-text">Ред. локацій</label>
+              </div>
+            </div>
+          </div>
+          <button id="btn-posedit-save">Зберегти</button>
+          <button id="btn-posedit-back" style="display: none;">Повернутися назад</button>
+        </div>
+      </section>
+
+      <section id="wdv-empl-form" class="wdv-form">
+        <div class="form">
+          <h1 id="empledit-title">Редактор категорії</h1>
+          <div class="form-fields">
+            <span>Прізвище<input type="text" id="inp-empledit-surname"></span>
+            <span>Ім'я<input type="text" id="inp-empledit-name"></span>
+            <span>По батькові<input type="text" id="inp-empledit-patronim"></span>
+            <span>Премія<input type="text" id="inp-empledit-salbonus"></span>
+          </div>
+          <button id="btn-empledit-save">Зберегти</button>
+          <button id="btn-empledit-back">Повернутися назад</button>
+        </div>
+      </section>
+
+      <section id="wdv-category-form" class="wdv-form">
+        <div class="form">
+          <h1 id="catedit-title">Редактор категорії</h1>
+          <div class="form-fields">
+            <span>Назва<input type="text" id="inp-catedit-name"></span>
+          </div>
+          <button id="btn-catedit-save">Зберегти</button>
+          <button id="btn-backto-catedit">Повернутися назад</button>
+        </div>
+      </section>
+
+      <section id="wdv-product-form" class="wdv-form">
+        <div class="form">
+          <h1 id="prodedit-title">Редактор продукту</h1>
+          <div class="form-fields">
+            <span>Назва<input type="text" id="inp-prodedit-name"></span>
+            <span>Опис (опціонально)<textarea id="inp-prodedit-desc" rows="4" maxlength="200"></textarea></span>
+            <span>Ціна<input type="number" id="inp-prodedit-price" min="0" max="99999"></span>
+            <span>Знижка (опціонально)<input type="number" id="inp-prodedit-discount" min="0" max="100"></span>
+            <span>Категорії<div id="prodedit-categories"></div></span>
+          </div>
+          <button id="btn-prodedit-save">Зберегти</button>
+          <button id="btn-prodedit-back">Повернутися назад</button>
+        </div>
+      </section>
+
+      <section id="wdv-stock-form" class="wdv-form">
+        <div class="form">
+          <h1 id="stockedit-title">Редактор кількості продукту на складі</h1>
+          <div class="form-fields">
+            <span>Кількість<input type="number" id="inp-stockedit"></span>
+          </div>
+          <button id="btn-stockedit-save">Зберегти</button>
+          <button id="btn-stockedit-back">Повернутися назад</button>
+        </div>
+      </section>
+    </main>
+    <footer>Pharma</footer>
+  </body>
+  <script type="module" src="js/main.js" defer></script>
+</html>
